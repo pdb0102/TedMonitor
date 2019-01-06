@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1768D0A0-850C-46FC-B6BD-8E21736DD5F1}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TedMonitor</RootNamespace>
+    <AssemblyName>TedMonitor</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MonitorThread.cs" />
+    <Compile Include="TedApi\Configuration.cs" />
+    <Compile Include="TedApi\CT.cs" />
+    <Compile Include="TedApi\DashData.cs" />
+    <Compile Include="TedApi\DemandCharge.cs" />
+    <Compile Include="TedApi\PlanType.cs" />
+    <Compile Include="TedApi\Rate.cs" />
+    <Compile Include="TedApi\MtuVal.cs" />
+    <Compile Include="TedApi\DialDataDetail.cs" />
+    <Compile Include="TedApi\GroupUsage.cs" />
+    <Compile Include="TedApi\MtuUsage.cs" />
+    <Compile Include="TedApi\NetworkSettings.cs" />
+    <Compile Include="TedApi\PhaseVoltage.cs" />
+    <Compile Include="TedApi\PhaseCurrent.cs" />
+    <Compile Include="TedApi\RestClient.cs" />
+    <Compile Include="TedApi\SpyderUsage.cs" />
+    <Compile Include="TedApi\SpyderData.cs" />
+    <Compile Include="TedApi\Api.cs" />
+    <Compile Include="TedApi\UsNap.cs" />
+    <Compile Include="TedApi\EccDisplay.cs" />
+    <Compile Include="TedApi\Group.cs" />
+    <Compile Include="TedApi\SpyderType.cs" />
+    <Compile Include="TedApi\Spyder.cs" />
+    <Compile Include="TedApi\Spyders.cs" />
+    <Compile Include="TedApi\Mtus.cs" />
+    <Compile Include="TedApi\Displays.cs" />
+    <Compile Include="TedApi\Display.cs" />
+    <Compile Include="TedApi\Gateway.cs" />
+    <Compile Include="TedApi\DisplaySettings.cs" />
+    <Compile Include="TedApi\EnergyDataType.cs" />
+    <Compile Include="TedApi\Mtu.cs" />
+    <Compile Include="TedApi\SystemSettings.cs" />
+    <Compile Include="TedApi\MtuType.cs" />
+    <Compile Include="TedApi\SystemType.cs" />
+    <Compile Include="TedApi\TedDateTime.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

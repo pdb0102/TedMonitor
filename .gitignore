@@ -1,0 +1,25 @@
+# Visual Studio files 
+*.vcxproj.user
+*.sdf
+*.opensdf
+*.csproj.user
+*.suo
+*.vshost.exe
+*.wixproj.user
+*.userprefs
+*.aps
+.vs/
+
+# Output Directories
+[Dd]ebug/
+[Rr]elease/
+[Oo]bj/
+[Bb]in/
+
+# Automatically Generated Sources
+[Dd]ocumentation/XML/
+*.vsmdi
+~*.docx
+~*.tmp
+
+*.pyc
