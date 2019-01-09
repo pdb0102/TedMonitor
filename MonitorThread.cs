@@ -473,7 +473,7 @@ namespace TedMonitor {
 						break;
 					}
 
-					GetGauge("Current solar production", solar_data.Value, solar_max, sb);
+					GetGauge("Current solar production", Math.Max(0, solar_data.Value * -1), solar_max, sb);
 					break;
 				}
 
